@@ -8,6 +8,7 @@ const weathercode = require('./utlis/weathercode')
 // import path from 'path'
 
 const app = express()
+const port = process.env.PORT || 3000
 
 console.log(path.join(__dirname, '../public'))
 //Define Path for express config
@@ -130,7 +131,7 @@ app.get('*', (req, res) => {
 })
 
 
-const port = 3000
+
 app.listen(port, () => {
     console.log("Listing to port", port)
 })
